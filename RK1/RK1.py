@@ -72,6 +72,6 @@ for id_row, surname, tbl_name in query_1():
 print("\nЗапрос 2 (минимальные зарплаты по отделам):")
 print(query_2())
 
-print("\nЗапрос 3 (все строки и их таблицы):")
+print("\nЗапрос 3 (все строки и их таблицы): ")
 for id_row, surname, tbl_name in query_3():
     print(f"Фамилия: {surname}, Таблица: {tbl_name}")
