@@ -65,7 +65,7 @@ def query_3():
         result.append((row.id_row, col.Surname, tbl.name))
     return result
 
-print("Запрос 1 (фамилии на 'А' и их таблицы):")
+print("Запрос 1 (фамилии на 'А' и их таблицы): ")
 for id_row, surname, tbl_name in query_1():
     print(f"Фамилия: {surname}, Таблица: {tbl_name}")
 
