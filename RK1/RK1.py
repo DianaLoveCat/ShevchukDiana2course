@@ -74,4 +74,4 @@ print(query_2())
 
 print("\nЗапрос 3 (все строки и их таблицы):")
 for id_row, surname, tbl_name in query_3():
-    print(f"ID строки: {id_row}, Фамилия: {surname}, Таблица: {tbl_name}")
+    print(f"Фамилия: {surname}, Таблица: {tbl_name}")
