@@ -1,16 +1,13 @@
 from .rectangle import Rectangle
+from .colour import Colour
 
 class Square(Rectangle):
-    def __init__(self, side, colour):
-        self.side = side
-        self.colour = colour
+    def __init__(self, side, colour = Colour):
+        super().__init__(side, side, colour)
         self.Name = "Квадрат"
 
-    def figureName(self):
-        return self.Name
-
     def area(self):
-        return self.side**2
+        return self.width * self.height
 
     def __repr__(self):
-        return f"{self.Name}: длина стороны {self.side},цвет {self.colour},площадь {self.area()}"
+        return f"{self.Name}: длина стороны {self.width},цвет {self.colour},площадь {self.area()}"

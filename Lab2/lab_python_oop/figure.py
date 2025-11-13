@@ -1,6 +1,6 @@
 from abc import ABC,abstractmethod
 
-class GeomFigure(ABC):
+class Figure(ABC):
     @abstractmethod
     def area(self):
         pass

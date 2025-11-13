@@ -1,15 +1,12 @@
-from .figure import GeomFigure
+from .figure import Figure
 from .colour import Colour
 import math
 
-class Circle(GeomFigure):
+class Circle(Figure):
     def __init__(self, radius, colour = Colour):
         self.radius = radius
         self.colour = colour
         self.Name = "Круг"
-
-    def figureName(self):
-        return self.Name
 
     def area(self):
         return math.pi * self.radius**2
