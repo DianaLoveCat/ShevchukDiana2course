@@ -1,26 +1,18 @@
-from math import pi
+from .figure import GeomFigure
+from .colour import Colour
+import math
 
-from .color import Color
-from .figure import Figure
-
-
-class Circle(Figure):
-    def __init__(self, radius: float=0., color: Color | None=None):
-        super().__init__(color)
-
+class Circle(GeomFigure):
+    def __init__(self, radius, colour = Colour):
         self.radius = radius
-        self.object_name = "Circle"
+        self.colour = colour
+        self.Name = "Круг"
 
-    def __repr__(self) -> str:
-        return f"{self.object_name}:\n  radius - {self.radius}\n  color - {self.color}"
+    def figureName(self):
+        return self.Name
 
-    @property
-    def radius(self) -> float:
-        return self._radius
+    def area(self):
+        return math.pi * self.radius**2
 
-    @radius.setter
-    def radius(self, value: float):
-        self._radius = value if value >= 0 else 0
-
-    def calculate_area(self) -> float:
-        return pi * self.radius ** 2
+    def __repr__(self):
+        return f"{self.Name}: радиус {self.radius}, цвет {self.colour}, площадь {round(self.area(),3)}"
