@@ -7,7 +7,7 @@ class Square(Rectangle):
         self.Name = "Квадрат"
 
     def area(self):
-        return self.width * self.height
+        return super().area()
 
     def __repr__(self):
         return f"{self.Name}: длина стороны {self.width},цвет {self.colour},площадь {self.area()}"
